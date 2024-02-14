@@ -1,4 +1,5 @@
 # flutter_technical_test
+<<<<<<< HEAD
 
 A new Flutter project.
 
@@ -14,3 +15,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# Executer la commande "flutter pub get" ou appuyer "clt + s" dans le fichier pubspec.yaml pour recupérer toutes les dépendances du projet "
+# Ensuite exécuter la commande  "flutter run" et choisit ton navigateur et vous verrez le résultat du projet
+>>>>>>> 267f324792f289c440c9e224246c763b21154c80
