@@ -22,14 +22,6 @@ class Country {
     );
   }
 
-  Map<String, dynamic> toJson() {
-    return {
-      'name': name,
-      'capital': capital,
-      'population': population,
-      'area': area,
-      'flagUrl': flagUrl,
-    };
-  }
+ 
 
 }
