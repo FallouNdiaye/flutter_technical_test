@@ -102,37 +102,18 @@ class SearchCountryScreenState extends State<SearchCountryScreen> {
               countrySearch.isEmpty
                   ? SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
-                      child: Container()
+                      child:  LottieWidget(
+            assets: Resources.lottieEmpty,
+          )
                    
                     )
                 
                   : AsyncValueWidget<List<Country>?>(
                       value: asyncValue,
                       data: (value) {
-                        if (value == null) {
-                          return Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                               Container()
-                            //  ListTileShimmer()
-                                ]);
-                        
-
-                        
-                        }
-                        if (value.isEmpty) {
-                          return 
-                          Text(
-                      'Aucun Resultat trouvé sur "$nameRecherch "',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xFF111111),
-                      ),
-                    );
-                          
-                        }
-                        return ShowCountries(countries: value);
+                       
+                       
+                        return ShowCountries(countries: value!);
                         
                        
                       },

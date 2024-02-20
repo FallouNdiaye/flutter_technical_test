@@ -82,28 +82,30 @@ getCountries() async {
 
 
 Widget _showProgresss(){
-  return Container(
-        padding: const EdgeInsets.all(20),
+  return  Column(children: [
+     const SizedBox(height: 40),
+    Container(
+       
             
             width: MediaQuery.of(context).size.width,
-            child: Center(child:Row(children: [
-        CircularProgressIndicator(
+            child: Row(children: [
+       const CircularProgressIndicator(
           backgroundColor: Colors.blue,
           valueColor: AlwaysStoppedAnimation<Color>(
             Colors.yellow, //<-- SEE HERE
           ),
         ),
-        Container(
-            margin: EdgeInsets.only(left: 10),
-            child: Text("Chargement...",
+      Container(
+            margin: const EdgeInsets.only(left: 10),
+            child: const Text("Chargement...",
                 style: TextStyle(
                     fontSize: 12,
-                    //fontWeight: FontWeight.bold,
-                    fontFamily: 'Montserrat-Bold',
+                   
+                   
                     color: Colors.blue),
                 maxLines: 2,
                 textAlign: TextAlign.center)),
-      ])));
+      ]))]);
     
 }
 

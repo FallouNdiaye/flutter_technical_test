@@ -13,6 +13,7 @@ class BackendService {
     List<Country> data = [];
      final SharedPreferences prefs = await SharedPreferences.getInstance();
   final String cachedData = prefs.getString('cachedCountries') ?? '';
+   
 
    var connectivityResult = await (Connectivity().checkConnectivity());
     if (connectivityResult == ConnectivityResult.mobile ||
@@ -28,7 +29,7 @@ class BackendService {
      
         for (var item in body) {
          // print(item['name']['common']);
-          print(item['flags']['png']!=null?item['flags']['png']:'');
+          
          data.add(Country(name:item['name']['common']!=null?item['name']['common']:'', 
         capital:item['capital']!=null?item['capital'][0]:'N/A',
          population:item['population']!=null?item['population']:0,
@@ -38,19 +39,19 @@ class BackendService {
         }
         
         prefs.setString('cachedCountries', convert.json.encode(data));
+ 
         return data;
       } else {
         return -1;
       }
     } catch (error) {
-      print('khouma');
-      print(error);
+      
       return -1;
     }
         }
         else{
-          print('ici');
-                 if (cachedData.isNotEmpty) {
+         
+         if (cachedData.isNotEmpty) {
     
     final List<dynamic> cachedJson = convert.json.decode(cachedData);
     return cachedJson.map((json) => Country.fromJson(json)).toList();

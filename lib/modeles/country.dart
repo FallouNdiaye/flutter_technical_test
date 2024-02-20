@@ -14,11 +14,11 @@ class Country {
   });
    factory Country.fromJson(Map<String, dynamic> json) {
     return Country(
-      name: json['name']['common'],
-      capital: json['capital'] != null ? json['capital'][0] : 'N/A',
+      name: json['name'],
+      capital: json['capital'] != null ? json['capital'] : 'N/A',
       population: json['population'] ?? 0,
       area: json['area'] ?? 0,
-      flagUrl: json['flags']['png'],
+      flagUrl: json['flagUrl'],
     );
   }
 

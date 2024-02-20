@@ -3,6 +3,6 @@ class Resources {
   static const _baseJsons = 'assets/jsons';
   static const String lottieLoading = '$_baseJsons/loading.json';
   static const String lottieEmpty = '$_baseJsons/empty.json';
-  static const String lottieSearch = '$_baseJsons/search.json';
+ 
   static const String lottieError = '$_baseJsons/error.json';
 }
